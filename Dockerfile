@@ -13,7 +13,6 @@ RUN flutter upgrade
 RUN flutter config --enable-web
 
 # Build
-RUN dart run build_runner build
 RUN flutter build web --release
 
 
