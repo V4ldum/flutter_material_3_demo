@@ -1,5 +1,5 @@
 services:
-  bingo:
+  m3:
     image: ghcr.io/v4ldum/m3:latest
     restart: unless-stopped
     networks:
