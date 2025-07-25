@@ -1,0 +1,17 @@
+services:
+  bingo:
+    image: ghcr.io/v4ldum/m3:latest
+    restart: unless-stopped
+    networks:
+      - "netv6"
+    environment:
+      - TZ=Europe/Paris
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.m3.tls=true"
+      - "traefik.http.routers.m3.entrypoints=websecure"
+      - "traefik.http.routers.m3.rule=Host(`m3.valdum.dev`)"
+
+networks:
+  netv6:
+    external: true
